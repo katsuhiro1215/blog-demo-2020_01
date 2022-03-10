@@ -604,46 +604,58 @@ img {
   width: 95%;
   margin: 0 auto;
   padding: 30px 15px;
+
   .tab-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     li {
       margin: 0 5px;
       padding: 16px 32px;
       border: 1px solid #333;
       border-radius: 5px;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: var(--black-font-color);
       transition: all 0.3s ease;
       cursor: pointer;
-    }    
+
+      &.current {
+        background: var(--secondary-bg-color);
+        color: #fff;
+      }
+    }
   }
 }
 
 .tab-content {
   width: 95%;
   margin: 0 auto;
+
   .list {
     width: 100%;
     display: block;
     transition: all 0.5s ease;
     margin-bottom: 15px;
+
     a {
-      
+
       article {
         display: flex;
         justify-content: center;
         padding: 15px;
+
         figure {
           flex: 0 0 40%;
           max-width: 40%;
           margin-right: 15px;
           position: relative;
+
           img {
             width: 100%;
             object-fit: cover;
           }
+
           .category-name {
             position: absolute;
             top: 0;
@@ -652,21 +664,25 @@ img {
             border: 1px solid #333;
             background-color: var(--secondary-bg-color);
             opacity: 0.8;
+
             span {
               font-size: 1.0rem;
               color: #fff;
             }
           }
         }
+
         .card-content {
           flex: 0 0 60%;
           max-width: 60%;
           position: relative;
+
           .title {
             font-family: var(--main-g-font);
             font-size: 1.8rem;
             color: var(--black-font-color);
           }
+
           .text {
             p {
               font-family: var(--main-m-font);
@@ -676,10 +692,12 @@ img {
               line-height: 1.5;
             }
           }
+
           time {
             position: absolute;
             bottom: 10px;
             right: 10px;
+
             span {
               padding-left: 0.4rem;
               font-size: 1.2rem;
@@ -688,6 +706,7 @@ img {
         }
       }
     }
+
     &:hover {
       background: #E8F5E9;
     }
@@ -702,6 +721,7 @@ img {
   padding: 8px 0;
   margin-bottom: 16px;
   border-radius: 5px;
+
   a {
     display: block;
     font-size: 1.8rem;
@@ -713,10 +733,13 @@ img {
 .pagination {
   display: flex;
   justify-content: center;
+
   .page-numbers {
     background: var(--green-bg-color);
     margin: 0 8px;
-    padding: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1.6rem;
     color: #fff;
   }
 }
@@ -733,10 +756,12 @@ img {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 15px;
+
   .headline {
     background: var(--green-bg-color);
     padding: 12px 24px;
     margin-bottom: 16px;
+
     h2 {
       font-size: 1.8rem;
       color: #fff;
@@ -747,8 +772,10 @@ img {
 
 .profile-widget {
   text-align: center;
+
   figure {
     margin: 15px auto;
+
     img {
       width: 150px;
       height: 150px;
@@ -756,19 +783,24 @@ img {
       border-radius: 50%;
     }
   }
+
   h2 {
     font-size: 1.6rem;
     margin-bottom: 8px;
   }
+
   p {
     font-size: 1.4rem;
     margin-bottom: 16px;
   }
+
   .social-list {
     display: flex;
     justify-content: center;
+
     li {
       padding: 0 15px;
+
       a {
         i {
           font-size: 1.6rem;
@@ -779,7 +811,35 @@ img {
 }
 
 .search-widget {
+  form {
+    margin: 1em 0 2em;
+    position: relative;
 
+    input {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-width: 0 0 2px 0;
+      border-radius: 0;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom: 2px solid #66BB6A;
+      font-size: 1.6rem;
+      padding: 12px;
+    }
+
+    button {
+      position: absolute;
+      right: 4px;
+      top: calc(50% - 12px);
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+      color: #ddd;
+      padding: 0 8px;
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+  }
 }
 
 .calendar-widget {
@@ -789,12 +849,16 @@ img {
     font-size: 1.0rem;
     border-collapse: separate;
     table-layout: fixed;
-    th, td {
+
+    th,
+    td {
       padding: 2px;
       line-height: 2;
       text-align: center;
     }
-    thead, tfoot {
+
+    thead,
+    tfoot {
 
       th {
         border: none;
@@ -802,9 +866,9 @@ img {
         line-height: 2;
       }
     }
-    tbody {
 
-    }
+    tbody {}
+
     td {
       a {
         display: block;
@@ -812,6 +876,7 @@ img {
         padding: 0;
         text-decoration: none;
         background: #eee;
+
         &:hover {
           color: #fff;
           background: #aaa;
@@ -828,13 +893,16 @@ img {
         display: block;
         padding: 15px;
         transition: all 0.5s ease;
+
         .title {
           font-size: 1.6rem;
         }
+
         &:hover {
           background-color: #E8F5E9;
         }
       }
+
       time {
         font-size: 1.2rem;
         padding: 15px;
@@ -851,9 +919,11 @@ img {
         justify-content: space-between;
         padding: 15px;
         transition: all 0.5s ease;
+
         span {
           font-size: 1.6rem;
         }
+
         &:hover {
           background-color: #E8F5E9;
         }
@@ -870,9 +940,11 @@ img {
         justify-content: space-between;
         padding: 15px;
         transition: all 0.5s ease;
+
         span {
           font-size: 1.6rem;
         }
+
         &:hover {
           background-color: #E8F5E9;
         }
@@ -890,6 +962,7 @@ img {
       border: 1px solid #333;
       border-radius: 4px;
       transition: all 0.5s ease;
+
       &:hover {
         background-color: #E8F5E9;
       }
@@ -900,31 +973,38 @@ img {
 .footer {
   margin-top: 30px;
   background: #333;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .brand {
       padding: 30px 0;
+
       h2 {
         font-size: 2.4rem;
         font-weight: bold;
+
         a {
           color: #fff;
         }
       }
     }
+
     .footer-nav {
       ul {
         li {
           display: inline-block;
           margin-left: 15px;
           border-left: 1px solid #fff;
+
           a {
             padding: 0 15px;
             font-size: 1.6rem;
             color: #fff;
           }
+
           &:last-child {
             border-right: 1px solid #fff;
           }
@@ -932,6 +1012,7 @@ img {
       }
     }
   }
+
   p {
     text-align: center;
     font-size: 1.2rem;
@@ -941,7 +1022,52 @@ img {
 }
 
 
+.profile-design {
+  width: 95%;
+  margin: 0 auto;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
 
+  figure {
+    flex: 0 0 50%;
+    max-width: 50%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .textBx {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 15px;
+    h2 {
+      font-size: 1.8rem;
+      color: var(--black-font-color);
+    }
+    p {
+      font-size: 1.4rem;
+      color: var(--black-font-color);
+    }
+  }
+
+  &.design-1 {
+    figure {
+      margin-right: 15px;
+    }
+  }
+  &.design-3 {
+    figure {
+      margin: 0;
+    }
+  }
+  &.design-4 {
+    figure {
+      margin-left: 15px;
+    }
+  }
+}
 
 
 

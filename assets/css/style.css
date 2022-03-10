@@ -582,11 +582,16 @@ img {
   padding: 16px 32px;
   border: 1px solid #333;
   border-radius: 5px;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--black-font-color);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.tab-wrap .tab-list li.current {
+  background: var(--secondary-bg-color);
+  color: #fff;
 }
 
 .tab-content {
@@ -714,7 +719,9 @@ img {
 .pagination .page-numbers {
   background: var(--green-bg-color);
   margin: 0 8px;
-  padding: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1.6rem;
   color: #fff;
 }
 
@@ -791,6 +798,35 @@ img {
   font-size: 1.6rem;
 }
 
+.search-widget form {
+  margin: 1em 0 2em;
+  position: relative;
+}
+
+.search-widget form input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-width: 0 0 2px 0;
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 2px solid #66BB6A;
+  font-size: 1.6rem;
+  padding: 12px;
+}
+
+.search-widget form button {
+  position: absolute;
+  right: 4px;
+  top: calc(50% - 12px);
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  color: #ddd;
+  padding: 0 8px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .calendar-widget table {
   width: 100%;
   margin: 0 auto;
@@ -799,13 +835,15 @@ img {
   table-layout: fixed;
 }
 
-.calendar-widget table th, .calendar-widget table td {
+.calendar-widget table th,
+.calendar-widget table td {
   padding: 2px;
   line-height: 2;
   text-align: center;
 }
 
-.calendar-widget table thead th, .calendar-widget table tfoot th {
+.calendar-widget table thead th,
+.calendar-widget table tfoot th {
   border: none;
   padding: 0;
   line-height: 2;
@@ -956,5 +994,64 @@ img {
   font-size: 1.2rem;
   color: #fff;
   padding: 8px 0;
+}
+
+.profile-design {
+  width: 95%;
+  margin: 0 auto;
+  padding: 30px 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile-design figure {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.profile-design figure img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile-design .textBx {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+  padding: 15px;
+}
+
+.profile-design .textBx h2 {
+  font-size: 1.8rem;
+  color: var(--black-font-color);
+}
+
+.profile-design .textBx p {
+  font-size: 1.4rem;
+  color: var(--black-font-color);
+}
+
+.profile-design.design-1 figure {
+  margin-right: 15px;
+}
+
+.profile-design.design-3 figure {
+  margin: 0;
+}
+
+.profile-design.design-4 figure {
+  margin-left: 15px;
 }
 /*# sourceMappingURL=style.css.map */
